@@ -1,3 +1,12 @@
+products = {
+    "americano":{"name":"Americano","price":150.00},
+    "brewedcoffee":{"name":"Brewed Coffee","price":110.00},
+    "cappuccino":{"name":"Cappuccino","price":170.00},
+    "dalgona":{"name":"Dalgona","price":170.00},
+    "espresso":{"name":"Espresso","price":140.00},
+    "frappuccino":{"name":"Frappuccino","price":170.00},
+}
+
 def get_product(code):
     info = products[code]
     return info
