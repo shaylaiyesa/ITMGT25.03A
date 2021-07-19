@@ -77,24 +77,16 @@ CODE\t\t\t\t\tNAME\t\t\t\t\t\tQUANTITY\t\tSUBTOTAL''')
             subtotal = quantity * get_property(code,"price")
             total += subtotal
 
-            if code == "americano":
+            if code == "dalgona":
                 receipt.write(f'''
-{code}\t\t\t{name}\t\t\t\t{quantity}\t\t\t\t\t\t{subtotal}''')
-            elif code == "brewedcoffee":
+{code}\t\t\t{name}\t\t\t\t{quantity}\t\t\t{subtotal}''')
+            else:
                 receipt.write(f'''
-{code}\t{name}\t\t{quantity}\t\t\t\t\t\t{subtotal}''')
-            elif code == "cappuccino":
-                receipt.write(f'''
-{code}\t\t{name}\t\t\t{quantity}\t\t\t\t\t\t{subtotal}''')
-            elif code == "dalgona":
-                receipt.write(f'''
-{code}\t\t\t\t{name}\t\t\t\t\t{quantity}\t\t\t\t\t\t{subtotal}''')
-            elif code == "frappuccino":
-                receipt.write(f'''
-{code}\t\t{name}\t\t\t{quantity}\t\t\t\t\t\t{subtotal}''')
-            elif code == "espresso":
-                receipt.write(f'''
-{code}\t\t\t{name}\t\t\t\t{quantity}\t\t\t\t\t\t{subtotal}''')
+{code}\t\t{name}\t\t\t{quantity}\t\t\t{subtotal}''')
+
+        receipt.write(f'''
+        
+Total:\t\t\t\t\t\t\t\t\t\t{total}
 
         receipt.write(f'''
 
