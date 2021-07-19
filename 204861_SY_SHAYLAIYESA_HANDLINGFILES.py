@@ -87,10 +87,6 @@ CODE\t\t\t\t\tNAME\t\t\t\t\t\tQUANTITY\t\tSUBTOTAL''')
         receipt.write(f'''
         
 Total:\t\t\t\t\t\t\t\t\t\t{total}
-
-        receipt.write(f'''
-
-Total:\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{total}
 ==
         ''')
 
